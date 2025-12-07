@@ -6,11 +6,11 @@ I want you to act as a senior DevOps and site reliability engineer who is profic
 
 | NAME | PROMPT | DESCRIPTION | EXAMPLE |
 | ---- | ------ | ----------- | ------- |
-|app|Request: create a pod using Nginx image of version "1.29.3" with port 8080.|Simple pod|[app.yml](./app.yml)|
-|app with liveness probe|Request: create a pod using Nginx image of version "1.29.3" with port 8080 and liveness probe on the same port. Path for the probe: '/'.|Pod with liveness probe.|[app-livenessProbe.yaml](./app-livenessProbe.yaml)|
-|app with readiness probe|Request: create a pod using Nginx image of version "1.29.3" with port 80 and liveness and readiness probes on the same port. Path for the probe: '/'.|Pod with liveness and readiness probes|[app-readinessProbe.yaml](./app-readinessProbe.yaml)|
-|app with volume mount|Request: create a pod using Nginx image of version "1.29.3" with port 80 and liveness and readyness probes on the same port. Path for the probe: '/'. Add volume mount of 'hostPath' type. Path on the host: /tmp/workdir; path to mount inside container: /workdir.|Pod with 'hostPath' volume mount|[app-volumeMounts.yml](./app-volumeMounts.yaml)|
-|cron-job|Request: cron job that runs every hour and executes command `df -h`|Cron job|[app-cronjob.yaml](./app-cronjob.yaml)|
-|app-multicontainer|Request: multicontainer pod|Pod with more than one container|[app-multicontainer.yaml](./app-multicontainer.yaml)|
-|app with resources|Requests: pod with requests and limits|Pod with resource requests and limites set up|[app-resources.yaml](./app-resources.yaml)|
-|app with secret mount|Request: pod with "secret" volume mount.|Secret mounted as a volume|[app-secret-env.yaml](./app-secret-env.yaml)|
+|app|Request: create a pod using Nginx image of version "1.29.3" with port 8080.|Simple pod|[app.yml](./yaml/app.yml)|
+|app with liveness probe|Request: create a pod using Nginx image of version "1.29.3" with port 8080 and liveness probe on the same port. Path for the probe: ./yaml/'.|Pod with liveness probe.|[app-livenessProbe.yaml](./yaml/app-livenessProbe.yaml)|
+|app with readiness probe|Request: create a pod using Nginx image of version "1.29.3" with port 80 and liveness and readiness probes on the same port. Path for the probe: ./yaml/'.|Pod with liveness and readiness probes|[app-readinessProbe.yaml](./yaml/app-readinessProbe.yaml)|
+|app with volume mount|Request: create a pod using Nginx image of version "1.29.3" with port 80 and liveness and readyness probes on the same port. Path for the probe: ./yaml/'. Add volume mount of 'hostPath' type. Path on the host:./yaml/tm./yaml/workdir; path to mount inside container:./yaml/workdir.|Pod with 'hostPath' volume mount|[app-volumeMounts.yml](./yaml/app-volumeMounts.yaml)|
+|cron-job|Request: cron job that runs every hour and executes command `df -h`|Cron job|[app-cronjob.yaml](./yaml/app-cronjob.yaml)|
+|app-multicontainer|Request: multicontainer pod|Pod with more than one container|[app-multicontainer.yaml](./yaml/app-multicontainer.yaml)|
+|app with resources|Requests: pod with requests and limits|Pod with resource requests and limites set up|[app-resources.yaml](./yaml/app-resources.yaml)|
+|app with secret mount|Request: pod with "secret" volume mount.|Secret mounted as a volume|[app-secret-env.yaml](./yaml/app-secret-env.yaml)|
