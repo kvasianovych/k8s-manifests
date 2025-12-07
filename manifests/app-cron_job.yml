@@ -1,0 +1,17 @@
+apiVersion: batch/v1
+kind: CronJob
+metadata:
+  name: df-h-cronjob
+spec:
+  # "0 * * * *" means "at minute 0 of every hour"
+  schedule: "0 * * * *"
+  jobTemplate:
+    spec:
+      template:
+        spec:
+          containers:
+          - name: disk-usage-check
+            image: busybox:1.35
+            # The command to be executed
+            command: ["/bin/sh", "-c", "df -h"]
+          restartPolicy: OnFailure
