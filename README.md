@@ -14,3 +14,4 @@ I want you to act as a senior DevOps and site reliability engineer who is profic
 |app-multicontainer|Request: multicontainer pod|Pod with more than one container|[app-multicontainer.yaml](./yaml/app-multicontainer.yaml)|
 |app with resources|Requests: pod with requests and limits|Pod with resource requests and limites set up|[app-resources.yaml](./yaml/app-resources.yaml)|
 |app with secret mount|Request: pod with "secret" volume mount.|Secret mounted as a volume|[app-secret-env.yaml](./yaml/app-secret-env.yaml)|
+|app job|Request: create a K8S job (Kind: Job) which invokes 'top' command.|K8S job|[app-job.yaml](./yaml/app-job.yaml)|

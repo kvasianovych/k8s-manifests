@@ -1,0 +1,13 @@
+apiVersion: batch/v1
+kind: Job
+metadata:
+  name: top-command-job
+spec:
+  template:
+    spec:
+      containers:
+      - name: top-runner
+        image: busybox:latest
+        command: ["top", "-b", "-n", "1"]
+      restartPolicy: OnFailure
+  backoffLimit: 4
